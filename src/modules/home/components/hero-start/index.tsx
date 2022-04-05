@@ -8,13 +8,15 @@ import './index.css';
 
 interface HeroStartProps {
   isInitialState: boolean;
+  onGoToForm?: () => void;
 }
 
-const HeroStart: FC<HeroStartProps> = ({isInitialState}) => {
+const HeroStart: FC<HeroStartProps> = ({isInitialState, onGoToForm}) => {
   const goToForm = () => {
     const formEl = document.getElementById(FORM_ID);
 
     formEl?.scrollIntoView();
+    onGoToForm?.();
   };
 
   return (
