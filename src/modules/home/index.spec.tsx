@@ -7,6 +7,6 @@ describe('<Home />', () => {
   test('Should render default view', () => {
     render(<Home />);
 
-    expect(screen.getByText('Empieza ya el proceso para poder vender tu casa')).toBeVisible();
+    expect(screen.getByText('Empieza ya el proceso para poder vender tu casa.')).toBeVisible();
   });
 });
