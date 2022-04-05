@@ -25,6 +25,7 @@ jobs:
     - run: npm ci
     - run: npm run build
     - run: npm run test -- --coverage
+    - run: npm run lint -- -o .eslint/test.json -f json
     - name: SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@master
       env:
