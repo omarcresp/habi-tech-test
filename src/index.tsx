@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 
 import App from './modules/root/App';
@@ -7,13 +7,14 @@ import reportWebVitals from './reportWebVitals';
 
 const baseUrl = process.env.PUBLIC_URL ?? '/';
 
-ReactDOM.render(
+const app = createRoot(document.getElementById('root') as HTMLElement);
+
+app.render(
   <React.StrictMode>
     <BrowserRouter basename={baseUrl}>
       <App />
     </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById('root')
 );
 
 reportWebVitals();

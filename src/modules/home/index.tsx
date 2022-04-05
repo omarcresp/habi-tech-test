@@ -18,7 +18,7 @@ const Home: FC = () => (
         </h3>
       </div>
 
-      <HeroStart />
+      <HeroStart isInitialState />
     </div>
 
     <main id={FORM_ID} className="home-container__entry-form">

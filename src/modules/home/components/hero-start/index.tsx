@@ -6,16 +6,27 @@ import {FORM_ID} from '../../index';
 
 import './index.css';
 
-const HeroStart: FC = () => {
-  const aux = () => {
+interface HeroStartProps {
+  isInitialState: boolean;
+}
+
+const HeroStart: FC<HeroStartProps> = ({isInitialState}) => {
+  const goToForm = () => {
     const formEl = document.getElementById(FORM_ID);
 
     formEl?.scrollIntoView();
   };
 
   return (
-    <div role="button" className="hero-start" tabIndex={0} onClick={aux} onKeyUp={a11yClickKeyEvent(aux)}>
-      <p className="hero-start__copy">Empezar</p>
+    <div
+      role="button"
+      className="hero-start"
+      tabIndex={0}
+      onClick={goToForm}
+      onKeyUp={a11yClickKeyEvent(goToForm)}>
+      <p className="hero-start__copy">
+        {isInitialState ? 'Empezar' : 'Continuar'}
+      </p>
 
       <img className="hero-start__icon" alt="see more icon" src={iconAngleDown} />
     </div>
