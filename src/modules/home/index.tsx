@@ -14,7 +14,7 @@ const Home: FC = () => (
 
       <div className="home-container__hero-content">
         <h3 className="home-container__hero-title">
-          Empieza ya el proceso para poder vender tu casa
+          Empieza ya el proceso para poder vender tu casa.
         </h3>
       </div>
 
