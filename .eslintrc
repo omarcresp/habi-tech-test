@@ -13,6 +13,8 @@
     "prettier"
   ],
   "rules": {
+    "react/function-component-definition": "off",
+    "quotes": ["error", "single"],
     "react/jsx-filename-extension": [
       1,
       {
@@ -21,6 +23,23 @@
           ".jsx"
         ]
       }
-    ]
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+   ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
   }
 }

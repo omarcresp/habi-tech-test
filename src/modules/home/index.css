@@ -1,0 +1,11 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-container__hero {
+  background: url('/public/assets/images/home-hero.jpg');
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+}
