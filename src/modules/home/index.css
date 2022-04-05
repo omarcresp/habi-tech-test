@@ -1,11 +1,43 @@
 .home-container {
   display: flex;
   flex-direction: column;
+  overflow: auto;
+  overflow: overlay;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  height: 100vh;
 }
 
 .home-container__hero {
-  background: url('/public/assets/images/home-hero.jpg');
+  scroll-snap-align: start;
+  background: url("/public/assets/images/home-hero.jpg");
   background-position: center;
   background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-container__hero-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  max-width: 60vh;
+  margin: auto;
+}
+
+.home-container__hero-title {
+  background: rgb(27 27 27 / 70%);
+  margin-bottom: 15vh;
+  padding: 32px;
+  color: #f3f3f3;
+  border-radius: 16px;
+  font-size: 24px;
+  text-align: justify;
+}
+
+.home-container__entry-form {
+  scroll-snap-align: start;
   min-height: 100vh;
 }

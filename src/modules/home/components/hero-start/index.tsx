@@ -1,11 +1,13 @@
-import React, {FC} from 'react';
+import React, { FC } from 'react';
+
+import './index.css';
 
 const HeroStart: FC = () => (
-  <div>
-    <p>Empezar</p>
+  <a className="hero-start" href="#entryForm">
+    <p className="hero-start__copy">Empezar</p>
 
-    <img src="/static/icons/chevron-down.svg" alt="see more icon" />
-  </div>
+    <img className="hero-start__icon" src="/assets/icons/angle-down.svg" alt="see more icon" />
+  </a>
 );
 
 export default HeroStart;

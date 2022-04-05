@@ -13,16 +13,15 @@ const Home: FC = () => (
       <Header />
 
       <div className={`${COMP_NAME}__hero-content`}>
-        <h3>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu sollicitudin elit. Morbi vel egestas
-          sem. Sed cursus erat et est tristique fermentum. Nulla sed commodo nisl, quis feugiat nulla
+        <h3 className={`${COMP_NAME}__hero-title`}>
+          Empieza ya el proceso para poder vender tu casa
         </h3>
       </div>
 
       <HeroStart />
     </div>
 
-    <main className={`${COMP_NAME}__entry-form`}>
+    <main id="entryForm" className={`${COMP_NAME}__entry-form`}>
       <h1>La vida es maravillosa, vivila wachin</h1>
     </main>
   </div>
