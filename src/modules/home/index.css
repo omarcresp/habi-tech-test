@@ -39,5 +39,8 @@
 
 .home-container__entry-form {
   scroll-snap-align: start;
+  display: flex;
   min-height: 100vh;
+  align-items: center;
+  justify-content: center;
 }

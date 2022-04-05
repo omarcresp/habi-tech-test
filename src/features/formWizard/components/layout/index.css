@@ -1,0 +1,83 @@
+.house-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.house-layout__progress {
+  border-radius: 8px;
+  width: calc(100% + 16px);
+  height: 20px;
+  margin-left: -8px;
+}
+
+.house-layout__progress::-webkit-progress-bar {
+  background-color: transparent;
+}
+.house-layout__progress::-webkit-progress-value {
+  background-color: #6a06fa;
+  border-radius: 16px;
+}
+
+.house-layout__container {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 12px;
+  margin: auto;
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  padding: 0 12px;
+}
+
+.house-layout__aside-menu {
+  border-right: 1px solid #b7b7b7;
+  padding: 16px;
+  margin-right: 12px;
+}
+
+.house-layout__aside-logo img {
+  width: 48px;
+  margin-bottom: 20px;
+}
+
+.house-layout__step-item {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  user-select: none;
+}
+
+.house-layout__step-index {
+  background: #6a06fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+  color: #f1f1f1;
+  border-radius: 50%;
+  padding-top: 1px;
+  box-sizing: border-box;
+}
+
+.house-layout__item-text {
+  margin-top: 1px;
+}
+
+.house-layout__step-item--current .house-layout__step-index {
+  background: #370480;
+}
+
+.house-layout__step-item--current .house-layout__item-text {
+  font-weight: 500;
+}
+
+.house-layout__step-item--prev {
+  cursor: pointer;
+}
+
+.house-layout__form-content {
+  flex: 1;
+}

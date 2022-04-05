@@ -1,0 +1,11 @@
+.placeholder {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.placeholder__form-content {
+  flex: 1;
+}

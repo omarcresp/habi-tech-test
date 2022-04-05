@@ -1,0 +1,26 @@
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.form-buttons__back {
+  cursor: pointer;
+  border: none;
+  background: unset;
+  text-decoration: underline;
+}
+
+.form-buttons__next {
+  cursor: pointer;
+  border: none;
+  background: #6a06fa;
+  border-radius: 8px;
+  padding: 8px;
+  color: #f1f1f1;
+}
+
+.form-buttons__next:active {
+  background: #370480;
+}

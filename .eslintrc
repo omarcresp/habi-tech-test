@@ -17,6 +17,8 @@
     "react/require-default-props": "off",
     "arrow-body-style": "off",
     "semi": ["error"],
+    "react/jsx-props-no-spreading": "off",
+    "react/prop-types": "off",
     "quotes": ["error", "single"],
     "react/jsx-filename-extension": [
       1,
