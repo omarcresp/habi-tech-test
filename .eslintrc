@@ -14,6 +14,8 @@
   ],
   "rules": {
     "react/function-component-definition": "off",
+    "arrow-body-style": "off",
+    "semi": ["error"],
     "quotes": ["error", "single"],
     "react/jsx-filename-extension": [
       1,

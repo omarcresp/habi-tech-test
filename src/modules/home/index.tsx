@@ -5,15 +5,15 @@ import Header from './components/header';
 
 import './index.css';
 
-const COMP_NAME = 'home-container';
+export const FORM_ID = 'entryForm';
 
 const Home: FC = () => (
-  <div className={COMP_NAME}>
-    <div className={`${COMP_NAME}__hero`}>
+  <div className="home-container">
+    <div className="home-container__hero">
       <Header />
 
-      <div className={`${COMP_NAME}__hero-content`}>
-        <h3 className={`${COMP_NAME}__hero-title`}>
+      <div className="home-container__hero-content">
+        <h3 className="home-container__hero-title">
           Empieza ya el proceso para poder vender tu casa
         </h3>
       </div>
@@ -21,7 +21,7 @@ const Home: FC = () => (
       <HeroStart />
     </div>
 
-    <main id="entryForm" className={`${COMP_NAME}__entry-form`}>
+    <main id={FORM_ID} className="home-container__entry-form">
       <h1>La vida es maravillosa, vivila wachin</h1>
     </main>
   </div>
