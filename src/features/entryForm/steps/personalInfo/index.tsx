@@ -3,7 +3,7 @@ import inputFactory from '../../factories/inputFactory';
 
 const PersonalInfo = inputFactory({
   nodeName: 'Personal Info',
-  title: 'Enter you personal info',
+  title: 'Ingresa tu informacion personal',
   form: [
     {id: 'name', label: 'Nombre', placeholder: 'Frailejon Ernesto Perez'},
     {id: 'email', label: 'Correo', placeholder: 'frailejon@colombia.com'},
