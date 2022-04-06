@@ -7,7 +7,7 @@ export interface InputProps {
   label?: string;
   placeholder?: string;
   type?: string;
-  value: InputHTMLAttributes<HTMLInputElement>['value'];
+  value?: InputHTMLAttributes<HTMLInputElement>['value'];
   onChange: (value: this['value'], ev: ChangeEvent<HTMLInputElement>) => void;
 }
 

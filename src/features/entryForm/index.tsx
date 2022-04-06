@@ -19,11 +19,12 @@ interface EntryFormProps {
 
 const MODAL_COPIES: Partial<Record<FormStates, ModalCopies>> = {
   initial: {
-    title: 'Hola Mundo',
+    title: 'Bienvenido',
+    description: 'temp',
     c2a: 'Empezar',
   },
   final: {
-    title: 'Adios vida',
+    title: 'Todo listo',
     c2a: 'Otra vez',
   },
 };
