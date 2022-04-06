@@ -41,7 +41,7 @@ const HouseAmenities: HouseFormNode = ({ currentStep, data, update, back, next }
       next={() => next(state)}>
       <div className="house-amenities">
         {AMENITIES_CONFIG.map(({id, label}) => (
-          <Checkbox id={id} label={label} checked={state[id] as boolean} onChange={(val) => handleChange(id, val)} />
+          <Checkbox id={id} key={id} label={label} checked={state[id] as boolean} onChange={(val) => handleChange(id, val)} />
         ))}
       </div>
     </NodeLayout>

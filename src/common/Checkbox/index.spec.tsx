@@ -2,7 +2,7 @@ import React from 'react';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import Checkbox from '.'
+import Checkbox from '.';
 
 describe('Checkbox', () => {
   test('Should render', () => {
@@ -48,11 +48,11 @@ describe('Checkbox', () => {
 
     render(<Checkbox
       id="test"
-      checked={true}
+      checked
       label="lorem"
       onChange={(val) => onChange(val)}
     />);
 
     expect(screen.getByLabelText('lorem')).toBeChecked();
   });
-})
+});
