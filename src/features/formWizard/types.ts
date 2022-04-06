@@ -4,12 +4,14 @@ interface WizardNodeAdditionals {
   stepName: string;
 }
 
-export type WizardNode<FormData> = FC<{
+export interface WizardNodeProps<FormData> {
   data: FormData;
   currentStep: number;
   next: (data?: FormData) => void;
   back: () => void;
-}> & WizardNodeAdditionals;
+}
+
+export type WizardNode<FormData> = FC<WizardNodeProps<FormData>> & WizardNodeAdditionals;
 
 export type WizardConfig<T> = WizardNode<T>[];
 

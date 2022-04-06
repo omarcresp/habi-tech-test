@@ -1,0 +1,17 @@
+.habi-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.habi-input__input {
+  background: transparent;
+  border-radius: 8px;
+  padding: 8px;
+  border: 1px solid transparent;
+  box-shadow: #1f1f1f 0px 0px 2px;
+}
+
+.habi-input__input:focus {
+  outline: none;
+  border: 1px solid #6a06fa;
+}

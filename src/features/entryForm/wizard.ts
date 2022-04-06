@@ -1,5 +1,6 @@
-import Placeholder from './steps/placeholder';
+import PersonalInfo from './steps/personalInfo';
+import HouseInfo from './steps/houseInfo';
 
-const wizardConfig = [Placeholder, Placeholder];
+const wizardConfig = [PersonalInfo, HouseInfo];
 
 export default wizardConfig;
