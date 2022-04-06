@@ -7,6 +7,11 @@ export interface HouseForm {
   dni: string;
   price: number;
   floor: number;
+  has_parking: boolean;
+  covered_parking: boolean;
+  gathering_zone: boolean;
+  child_park: boolean;
+  bbq_zone: boolean;
 }
 
 export type HouseFormNode = WizardNode<HouseForm>;

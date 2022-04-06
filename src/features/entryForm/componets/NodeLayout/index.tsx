@@ -6,7 +6,9 @@ import FormButtons from '../FormButtons';
 
 import './index.css';
 
-type NodeLayoutProps = Omit<HouseFormNodeProps, 'data'> & {
+type UsedNodeProps = 'currentStep' | 'next' | 'back';
+
+type NodeLayoutProps = Pick<HouseFormNodeProps, UsedNodeProps> & {
   title: string;
 };
 

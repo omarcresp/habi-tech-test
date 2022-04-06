@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 
 import Input, {InputProps} from 'common/Input';
 import NodeLayout from '../../componets/NodeLayout';
@@ -18,8 +18,12 @@ interface InputFactoryConfig {
 }
 
 const inputFactory = ({form, nodeName, title}: InputFactoryConfig) => {
-  const FormNode: HouseFormNode = ({currentStep, data, next, back}) => {
+  const FormNode: HouseFormNode = ({currentStep, data, next, back, update}) => {
     const [state, setState] = useState(data);
+
+    useEffect(() => {
+      update(state);
+    }, [state, update]);
 
     const handleChange = useCallback((key: keyof HouseForm, value: unknown) => {
       setState((current) => ({
@@ -42,7 +46,7 @@ const inputFactory = ({form, nodeName, title}: InputFactoryConfig) => {
                 type={type}
                 label={label}
                 placeholder={placeholder}
-                value={state[id]}
+                value={state[id] as string}
                 onChange={(val) => handleChange(id, val)}
               />
             ))}

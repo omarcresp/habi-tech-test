@@ -1,0 +1,4 @@
+.house-amenities {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,6 +1,6 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useMemo, useState } from 'react';
 
-import EntryForm from 'features/entryForm';
+import EntryForm, {FORM_KEY} from 'features/entryForm';
 import HeroStart from './components/hero-start';
 import Header from './components/header';
 
@@ -10,6 +10,7 @@ export const FORM_ID = 'entryForm';
 
 const Home: FC = () => {
   const [formInit, setFormInit] = useState(false);
+  const hasLocal = useMemo(() => !!localStorage.getItem(FORM_KEY), []);
 
   const onInit = () => {
     setFormInit(true);
@@ -23,11 +24,14 @@ const Home: FC = () => {
 
           <div className="home-container__hero-content">
             <h3 className="home-container__hero-title">
-              Empieza ya el proceso para poder vender tu casa.
+              {hasLocal
+                ? 'Ya falta poco! Termina el form'
+                : 'Empieza ya el proceso para poder vender tu casa.'
+              }
             </h3>
           </div>
 
-          <HeroStart isInitialState />
+          <HeroStart isInitialState={!hasLocal} />
         </div>
       )}
 

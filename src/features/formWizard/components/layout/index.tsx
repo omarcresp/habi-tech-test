@@ -15,7 +15,7 @@ interface LayoutProps {
 const Layout: FC<LayoutProps> = ({ totalSteps, currentStep, stepNames, children, onGoToStep }) => {
   return (
     <div className="house-layout">
-      <progress className="house-layout__progress" value={currentStep + 1} max={totalSteps + 1} />
+      <progress className="house-layout__progress" value={currentStep + 1} max={totalSteps} />
 
       <main className="house-layout__container">
         <aside className="house-layout__aside-menu">

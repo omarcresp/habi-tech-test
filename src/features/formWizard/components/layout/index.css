@@ -49,7 +49,7 @@
 }
 
 .house-layout__step-index {
-  background: #6a06fa;
+  background: #a1a1a1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,6 +68,10 @@
 
 .house-layout__step-item--current .house-layout__step-index {
   background: #370480;
+}
+
+.house-layout__step-item--prev .house-layout__step-index {
+  background: #6a06fa;
 }
 
 .house-layout__step-item--current .house-layout__item-text {
