@@ -39,17 +39,23 @@ const inputFactory = ({form, nodeName, title}: InputFactoryConfig) => {
         currentStep={currentStep}
         next={() => next(state)}>
           <div className="input-factory">
-            {form.map(({id, label, placeholder, type}) => (
-              <Input
-                id={id}
-                key={id}
-                type={type}
-                label={label}
-                placeholder={placeholder}
-                value={state[id] as string}
-                onChange={(val) => handleChange(id, val)}
-              />
-            ))}
+            {form.map(({id, label, placeholder, type}) => {
+              const onInputChange = useCallback((val: unknown) => {
+                handleChange(id, val);
+              }, [handleChange]);
+
+              return (
+                <Input
+                  id={id}
+                  key={id}
+                  type={type}
+                  label={label}
+                  placeholder={placeholder}
+                  value={state[id] as string}
+                  onChange={onInputChange}
+                />
+              );
+            })}
           </div>
         </NodeLayout>
     );

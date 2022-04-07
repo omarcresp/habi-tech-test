@@ -64,7 +64,7 @@ const Input: FC<InputProps> = ({
   onChange
 }) => {
   const [hasError, setHasError] = useState(false);
-  const [internalValue, setInteralValue] = useState<InputValue>();
+  const [internalValue, setInteralValue] = useState<InputValue>(value);
   const prevValue = usePrevious(internalValue);
   const aux = useMemo(() => TYPE_BUILDER[type], [type]);
 

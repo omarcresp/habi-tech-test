@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, {FC, useState, useCallback} from 'react';
 
 import iconLogo from 'assets/icons/logo.svg';
 
@@ -38,13 +38,13 @@ const EntryForm: FC<EntryFormProps> = ({onInit}) => {
   const [localForm, setLocalForm] = useState(JSON.parse(localStorage.getItem(FORM_KEY) ?? '{}'));
   const [currentState, setCurrentState] = useState<FormStates>('initial');
 
-  if (currentState === 'wizard' || localForm.formData) {
-    const onFinish = () => {
-      setCurrentState('final');
-      localStorage.removeItem(FORM_KEY);
-      setLocalForm({});
-    };
+  const onFinish = useCallback(() => {
+    setCurrentState('final');
+    localStorage.removeItem(FORM_KEY);
+    setLocalForm({});
+  }, []);
 
+  if (currentState === 'wizard' || localForm.formData) {
     return (
       <FormWizard
         localId={FORM_KEY}
