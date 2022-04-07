@@ -40,7 +40,7 @@ describe('Input', () => {
       screen.getByText('Todo listo')
     ).toBeVisible();
 
-    userEvent.click(screen.getByText('Otra vez'));
+    userEvent.click(screen.getByText('Empezar de nuevo'));
 
     expect(
       screen.getByText('Bienvenido')
