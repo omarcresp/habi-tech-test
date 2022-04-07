@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/habi-tech-test/static/css/main.483213d5.css",
+    "main.js": "/habi-tech-test/static/js/main.39b78573.js",
+    "static/media/home-hero.jpg": "/habi-tech-test/static/media/home-hero.25c64d6108256511d50e.jpg",
+    "static/media/logo.svg": "/habi-tech-test/static/media/logo.0c6b08f5c011797c91a0d222493356e5.svg",
+    "index.html": "/habi-tech-test/index.html",
+    "static/media/angle-down.svg": "/habi-tech-test/static/media/angle-down.1ff1fe62f2b689f67160f996774fbd43.svg",
+    "main.483213d5.css.map": "/habi-tech-test/static/css/main.483213d5.css.map",
+    "main.39b78573.js.map": "/habi-tech-test/static/js/main.39b78573.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.483213d5.css",
+    "static/js/main.39b78573.js"
+  ]
+}
