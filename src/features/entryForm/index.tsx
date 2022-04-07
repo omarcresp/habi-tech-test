@@ -3,7 +3,7 @@ import React, {FC, useState, useCallback} from 'react';
 import iconLogo from 'assets/icons/logo.svg';
 
 import FormWizard from 'features/formWizard';
-import wizardConfig from './wizard';
+import wizardConfig from './wizardConfig';
 
 import './index.css';
 

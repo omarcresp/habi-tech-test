@@ -42,6 +42,7 @@ const inputFactory = ({form, nodeName, title}: InputFactoryConfig) => {
           <div className="input-factory">
             {form.map((item) => <InputItem
               {...item}
+              key={item.id}
               value={state[item.id] as string}
               handleChange={handleChange}
             />)}

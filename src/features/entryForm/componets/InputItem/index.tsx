@@ -27,7 +27,6 @@ const InputItem: FC<InputItemProps> = ({
   return (
     <Input
       id={id}
-      key={id}
       type={type}
       label={label}
       placeholder={placeholder}
