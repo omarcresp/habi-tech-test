@@ -22,7 +22,7 @@ const InputItem: FC<InputItemProps> = ({
 }) => {
   const onInputChange = useCallback((val: unknown) => {
     handleChange(id, val);
-  }, [handleChange]);
+  }, [handleChange, id]);
 
   return (
     <Input

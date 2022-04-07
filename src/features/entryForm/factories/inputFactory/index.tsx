@@ -1,6 +1,6 @@
 import React, {useCallback, useEffect, useState} from 'react';
 
-import Input, {InputProps} from 'common/Input';
+import {InputProps} from 'common/Input';
 import NodeLayout from '../../componets/NodeLayout';
 import InputItem from '../../componets/InputItem';
 import {HouseFormNode, HouseForm} from '../../types';
