@@ -2,6 +2,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 
 import Input, {InputProps} from 'common/Input';
 import NodeLayout from '../../componets/NodeLayout';
+import InputItem from '../../componets/InputItem';
 import {HouseFormNode, HouseForm} from '../../types';
 
 import './index.css';
@@ -39,23 +40,11 @@ const inputFactory = ({form, nodeName, title}: InputFactoryConfig) => {
         currentStep={currentStep}
         next={() => next(state)}>
           <div className="input-factory">
-            {form.map(({id, label, placeholder, type}) => {
-              const onInputChange = useCallback((val: unknown) => {
-                handleChange(id, val);
-              }, [handleChange]);
-
-              return (
-                <Input
-                  id={id}
-                  key={id}
-                  type={type}
-                  label={label}
-                  placeholder={placeholder}
-                  value={state[id] as string}
-                  onChange={onInputChange}
-                />
-              );
-            })}
+            {form.map((item) => <InputItem
+              {...item}
+              value={state[item.id] as string}
+              handleChange={handleChange}
+            />)}
           </div>
         </NodeLayout>
     );
