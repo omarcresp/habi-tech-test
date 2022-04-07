@@ -23,7 +23,7 @@
   flex: 1;
   display: flex;
   align-items: center;
-  max-width: 60vh;
+  max-width: 60vw;
   margin: auto;
 }
 
@@ -43,4 +43,10 @@
   min-height: 100vh;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 960px) {
+  .home-container__hero-content {
+    max-width: 90vw;
+  }
 }

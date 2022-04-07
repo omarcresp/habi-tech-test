@@ -85,3 +85,9 @@
 .house-layout__form-content {
   flex: 1;
 }
+
+@media screen and (max-width: 960px) {
+  .house-layout__aside-menu {
+    display: none;
+  }
+}

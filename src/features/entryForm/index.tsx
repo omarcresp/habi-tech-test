@@ -1,5 +1,7 @@
 import React, { FC, useState } from 'react';
 
+import iconLogo from 'assets/icons/logo.svg';
+
 import FormWizard from 'features/formWizard';
 import wizardConfig from './wizard';
 
@@ -20,12 +22,13 @@ interface EntryFormProps {
 const MODAL_COPIES: Partial<Record<FormStates, ModalCopies>> = {
   initial: {
     title: 'Bienvenido',
-    description: 'temp',
+    description: 'Completa este formluario para empezar el proceso de venta de tu casa',
     c2a: 'Empezar',
   },
   final: {
     title: 'Todo listo',
-    c2a: 'Otra vez',
+    description: 'Nuestro equipo de ventas se pondra en contacto contigo pronto para terminar el proceso',
+    c2a: 'Empezar de nuevo',
   },
 };
 
@@ -60,13 +63,15 @@ const EntryForm: FC<EntryFormProps> = ({onInit}) => {
 
   return (
     <div className="entry-form">
-      <h2>{MODAL_COPIES[currentState]?.title}</h2>
+      <img className="entry-form__logo" src={iconLogo} alt="Habi logo" />
+
+      <h2 className="entry-form__title">{MODAL_COPIES[currentState]?.title}</h2>
 
       {MODAL_COPIES[currentState]?.description && (
-        <p>{MODAL_COPIES[currentState]?.description}</p>
+        <p className="entry-form__description">{MODAL_COPIES[currentState]?.description}</p>
       )}
 
-      <button type="button" onClick={swapState}>{MODAL_COPIES[currentState]?.c2a}</button>
+      <button className="entry-form__button" type="button" onClick={swapState}>{MODAL_COPIES[currentState]?.c2a}</button>
     </div>
   );
 };

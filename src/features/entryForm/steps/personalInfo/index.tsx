@@ -6,7 +6,7 @@ const PersonalInfo = inputFactory({
   title: 'Ingresa tu informacion personal',
   form: [
     {id: 'name', label: 'Nombre', placeholder: 'Frailejon Ernesto Perez'},
-    {id: 'email', label: 'Correo', placeholder: 'frailejon@colombia.com'},
+    {id: 'email', label: 'Correo', placeholder: 'frailejon@colombia.com', type: 'email'},
     {id: 'dni', label: 'Cedula', placeholder: '1', type: 'number'},
   ],
 });
